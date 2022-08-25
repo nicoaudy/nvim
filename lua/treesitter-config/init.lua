@@ -23,5 +23,8 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     extended_mode = true, -- Also highlight non bracket delimeter like html tags, boolean or table.
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
+  },
+  autopairs = {
+    enable = true
   }
 }

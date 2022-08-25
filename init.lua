@@ -5,5 +5,6 @@ require('lualine-config')
 require('bufferline-config')
 require('nvim-tree-config')
 require('treesitter-config')
+require('autopairs-config')
 
 vim.cmd[[colorscheme tokyonight]]
