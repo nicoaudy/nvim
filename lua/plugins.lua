@@ -23,5 +23,6 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', 
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use "folke/which-key.nvim"
+  use 'folke/which-key.nvim'
+  use 'norcalli/nvim-colorizer.lua'
 end)
