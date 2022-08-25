@@ -16,4 +16,6 @@ return require('packer').startup(function(use)
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
   }
+  use 'windwp/nvim-ts-autotag'
+  use 'p00f/nvim-ts-rainbow'
 end)
