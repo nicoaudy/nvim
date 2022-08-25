@@ -39,7 +39,6 @@ keymap('n', 'ss', ':split<Return><C-w>w', opts)
 keymap('n', 'sv', ':vsplit<Return><C-w>w', opts)
 --
 -- Move window
-keymap('n', '<Space>', '<C-w>w', opts)
 keymap('', 's<left>', '<C-w>h', opts)
 keymap('', 's<up>', '<C-w>k', opts)
 keymap('', 's<down>', '<C-w>j', opts)
