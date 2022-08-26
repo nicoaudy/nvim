@@ -1,5 +1,5 @@
 require('plugins')
-require('options')
 require('keymaps')
+require('options')
 
 vim.cmd[[colorscheme tokyonight]]

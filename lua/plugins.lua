@@ -68,7 +68,6 @@ return packer.startup(function(use) use 'wbthomason/packer.nvim'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/plenary.nvim' } },
-    cmd = "Telescope",
     config = "require('telescope-config')"
   }
 
