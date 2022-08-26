@@ -14,5 +14,6 @@ require('indent-blankline-config')
 require('toggleterm-config')
 require('comment-config')
 require('lsp')
+require('lsp-saga')
 
 vim.cmd[[colorscheme tokyonight]]

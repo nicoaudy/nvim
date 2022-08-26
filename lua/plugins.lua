@@ -39,10 +39,10 @@ packer.init {
 }
 
 -- Install your plugins here
-return packer.startup(function(use)use 'wbthomason/packer.nvim'
+return packer.startup(function(use) use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
-  use "terryma/vim-multiple-cursors"                          -- Multicursor <C-n>
-  use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
+  use "terryma/vim-multiple-cursors" -- Multicursor <C-n>
+  use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -62,7 +62,7 @@ return packer.startup(function(use)use 'wbthomason/packer.nvim'
   use 'windwp/nvim-autopairs'
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use 'folke/which-key.nvim'
   use 'norcalli/nvim-colorizer.lua'
@@ -73,6 +73,7 @@ return packer.startup(function(use)use 'wbthomason/packer.nvim'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
+  use 'kkharji/lspsaga.nvim'
 
   -- For vsnip users.
   use 'hrsh7th/cmp-vsnip'
@@ -84,11 +85,10 @@ return packer.startup(function(use)use 'wbthomason/packer.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use "akinsho/toggleterm.nvim"
   use "terrortylor/nvim-comment"
-  
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
 end)
-
