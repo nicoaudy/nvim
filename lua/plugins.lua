@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use {
-    'akinsho/bufferline.nvim', 
+    'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'
   }
   use {
@@ -20,23 +20,24 @@ return require('packer').startup(function(use)
   use 'p00f/nvim-ts-rainbow'
   use 'windwp/nvim-autopairs'
   use {
-    'nvim-telescope/telescope.nvim', 
+    'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'folke/which-key.nvim'
   use 'norcalli/nvim-colorizer.lua'
-  
+
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
-  
+
   -- For vsnip users.
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
-  
+
   use 'onsails/lspkind.nvim'
 
+  use 'lewis6991/gitsigns.nvim'
 end)
