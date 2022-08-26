@@ -83,6 +83,7 @@ return packer.startup(function(use)use 'wbthomason/packer.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use "akinsho/toggleterm.nvim"
+  use "terrortylor/nvim-comment"
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
