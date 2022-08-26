@@ -11,6 +11,7 @@ require('whichkey-config')
 require('colorizer-config')
 require('gitsigns-config')
 require('indent-blankline-config')
+require('toggleterm-config')
 require('lsp')
 
 vim.cmd[[colorscheme tokyonight]]
