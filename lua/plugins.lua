@@ -74,6 +74,7 @@ return packer.startup(function(use) use 'wbthomason/packer.nvim'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
   use 'kkharji/lspsaga.nvim'
+  use 'williamboman/nvim-lsp-installer'
 
   -- For vsnip users.
   use 'hrsh7th/cmp-vsnip'
