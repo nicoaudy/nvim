@@ -3,6 +3,12 @@ if not status_ok then
   return
 end
 
+local Terminal = require("toggleterm.terminal").Terminal
+local toggle_lazygit = function()
+  local lazygit = Terminal:new({ cmd = 'lazygit', direction = "float" })
+  return lazygit:toggle()
+end
+
 local setup = {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -136,6 +142,7 @@ local mappings = {
   t = {
     name = "Terminal",
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+    l = { toggle_lazygit, "Lazy Git" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
