@@ -99,6 +99,7 @@ return packer.startup(function(use) use 'wbthomason/packer.nvim'
   }
   use { "akinsho/toggleterm.nvim", config = "require('toggleterm-config')" }
   use { "terrortylor/nvim-comment", config = "require('comment-config')" }
+  use { "jose-elias-alvarez/null-ls.nvim", config = "require('null-ls-config')"}
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
