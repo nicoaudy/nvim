@@ -90,7 +90,7 @@ return packer.startup(function(use) use 'wbthomason/packer.nvim'
   use {
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
-    config = "require('gitsigns')",
+    config = "require('gitsigns-config')",
   }
   use {
     "lukas-reineke/indent-blankline.nvim",
