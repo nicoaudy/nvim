@@ -100,11 +100,31 @@ local mappings = {
 	["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 
 	g = {
-		name = "Go Definition",
+		name = "Git & Definition",
 		f = { "<cmd>Lspsaga lsp_finder<CR>", "Show Definition, References" },
 		D = { "<Cmd>lua vim.lsp.buf.declaration()<CR>", "Go to declaration" },
 		d = { "<cmd>Lspsaga peek_definition<CR>", "See definition and make edits in window" },
 		i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Go to implementation" },
+
+		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+		s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+		u = {
+			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+			"Undo Stage Hunk",
+		},
+		o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+		e = {
+			"<cmd>Gitsigns diffthis HEAD<cr>",
+			"Diff",
+		},
 	},
 
 	l = {
