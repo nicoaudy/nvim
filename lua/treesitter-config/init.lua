@@ -1,30 +1,37 @@
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics,
-    {
-        underline = true,
-        virtual_text = {
-            spacing = 5,
-            severity_limit = 'Warning',
-        },
-        update_in_insert = true,
-    }
-)
+-- import nvim-treesitter plugin safely
+local status, treesitter = pcall(require, "nvim-treesitter.configs")
+if not status then
+	return
+end
 
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "lua", "html", "javascript", "php" },
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-  autotag = {
-    enable = true,
-  },
-  rainbox = {
-    enable = true,
-    extended_mode = true, -- Also highlight non bracket delimeter like html tags, boolean or table.
-    max_file_lines = nil, -- Do not enable for files with more than n lines, int
-  },
-  autopairs = {
-    enable = true
-  }
-}
+-- configure treesitter
+treesitter.setup({
+	-- enable syntax highlighting
+	highlight = {
+		enable = true,
+	},
+	-- enable indentation
+	indent = { enable = true },
+	-- enable autotagging (w/ nvim-ts-autotag plugin)
+	autotag = { enable = true },
+	-- ensure these language parsers are installed
+	ensure_installed = {
+		"json",
+		"javascript",
+		"typescript",
+		"tsx",
+		"yaml",
+		"html",
+		"css",
+		"markdown",
+		"svelte",
+		"php",
+		"bash",
+		"lua",
+		"vim",
+		"dockerfile",
+		"gitignore",
+	},
+	-- auto install above language parsers
+	auto_install = true,
+})

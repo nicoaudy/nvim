@@ -1,3 +1,3 @@
-require('lsp/cmp')
-require('lsp/diagnostic_signs')
-require('lsp/language-servers')
+require('lsp/nvim-cmp')
+require('lsp/mason')
+require('lsp/lsp-config')
